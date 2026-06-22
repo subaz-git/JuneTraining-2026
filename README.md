@@ -2,13 +2,13 @@
 ---
 ## Rooms to Be Completed
 
-* [x] [Ohsint] (https://tryhackme.com/room/ohsint/)
-* [x] [Sakura] (https://tryhackme.com/room/sakura/)
-* [x] [SearchLight] (https://tryhackme.com/room/searchlightosint/)
-* [ ] [Kenobi] (https://tryhackme.com/room/kenobi/)
-* [ ] [Vulnversity] (https://tryhackme.com/room/vulnversity/)
-* [x] [Blue] (https://tryhackme.com/room/blue/)
-* [ ] [Ice] (https://tryhackme.com/room/ice/)
+* [x] [Ohsint](https://tryhackme.com/room/ohsint/)
+* [x] [Sakura](https://tryhackme.com/room/sakura/)
+* [x] [SearchLight](https://tryhackme.com/room/searchlightosint/)
+* [ ] [Kenobi](https://tryhackme.com/room/kenobi/)
+* [ ] [Vulnversity](https://tryhackme.com/room/vulnversity/)
+* [x] [Blue](https://tryhackme.com/room/blue/)
+* [ ] [Ice](https://tryhackme.com/room/ice/)
 
 ---
 

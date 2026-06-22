@@ -215,3 +215,16 @@ Can be installed in any system and takes too long to process.
 # Assignment
 
 * do https://tryhackme.com/room/vulnversity room
+
+---
+
+# DAY - 7 (22/06/2026)
+
+## Ice Room
+
+`nmap -sS -p- <ip>` is an Nmap command used to perform a TCP SYN scan on all TCP ports of a target host.
+### Breakdown
+* `nmap` — Starts the Nmap network scanner.
+* `-sS` — Performs a SYN scan (also called a half-open scan).
+* `-p-` — Scans all 65,535 TCP ports (1–65535).
+* `<ip>` — The target IP address.

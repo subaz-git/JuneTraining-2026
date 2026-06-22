@@ -10,6 +10,7 @@
 * [x] [Blue](https://tryhackme.com/room/blue/)
 * [ ] [Ice](https://tryhackme.com/room/ice/)
 * [x] [PickleRick](https://tryhackme.com/room/picklerick/)
+* [ ] [Wgel CTF](https://tryhackme.com/room/wgelctf/)
 
 ---
 

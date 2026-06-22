@@ -9,7 +9,7 @@
 * [ ] [Vulnversity](https://tryhackme.com/room/vulnversity/)
 * [x] [Blue](https://tryhackme.com/room/blue/)
 * [ ] [Ice](https://tryhackme.com/room/ice/)
-* [ ] [PickleRick](https://tryhackme.com/room/picklerick/)
+* [x] [PickleRick](https://tryhackme.com/room/picklerick/)
 
 ---
 
@@ -239,3 +239,27 @@ Can be installed in any system and takes too long to process.
 * `-sS` — Performs a SYN scan (also called a half-open scan).
 * `-p-` — Scans all 65,535 TCP ports (1–65535).
 * `<ip>` — The target IP address.
+
+## PickleRick
+
+* Scan the ip address
+* Analyze the webserver using gobuster
+* check directories and files
+* check files with 
+```shell
+gobuster -u <url> -x php,js,<extensions> -w path/to/wordlist
+```
+* logged using commented username and password in a text file found
+* listed files 
+```shell
+ls -a
+```
+* check for suspisious file
+* found 1st incredient
+* check for more files in system
+```shell
+find / -iname "*ingredient*" 2>/dev/null
+```
+* found something
+* checked the content > 2nd incredient found
+* checking the /root directory found 3rd incredient

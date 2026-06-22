@@ -9,6 +9,7 @@
 * [ ] [Vulnversity](https://tryhackme.com/room/vulnversity/)
 * [x] [Blue](https://tryhackme.com/room/blue/)
 * [ ] [Ice](https://tryhackme.com/room/ice/)
+* [ ] [PickleRick](https://tryhackme.com/room/picklerick/)
 
 ---
 

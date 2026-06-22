@@ -7,7 +7,8 @@
 * [x] [SearchLight] (https://tryhackme.com/room/searchlightosint/)
 * [ ] [Kenobi] (https://tryhackme.com/room/kenobi/)
 * [ ] [Vulnversity] (https://tryhackme.com/room/vulnversity/)
-* [ ] [Blue] (https://tryhackme.com/room/blue/]
+* [x] [Blue] (https://tryhackme.com/room/blue/)
+* [ ] [Ice] (https://tryhackme.com/room/ice/)
 
 ---
 

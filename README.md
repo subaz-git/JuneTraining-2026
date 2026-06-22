@@ -1,4 +1,13 @@
 # 🛡️ Cybersecurity Training Notes – June 2026
+---
+## Rooms to Be Completed
+
+* [x] [Ohsint] (https://tryhackme.com/room/ohsint/)
+* [x] [Sakura] (https://tryhackme.com/room/sakura/)
+* [x] [SearchLight] (https://tryhackme.com/room/searchlightosint/)
+* [ ] [Kenobi] (https://tryhackme.com/room/kenobi/)
+* [ ] [Vulnversity] (https://tryhackme.com/room/vulnversity/)
+* [ ] [Blue] (https://tryhackme.com/room/blue/]
 
 ---
 

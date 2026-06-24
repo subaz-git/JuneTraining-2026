@@ -11,6 +11,11 @@
 * [ ] [Ice](https://tryhackme.com/room/ice/)
 * [x] [PickleRick](https://tryhackme.com/room/picklerick/)
 * [ ] [Wgel CTF](https://tryhackme.com/room/wgelctf/)
+* [x] [Crack The Hash](https://tryhackme.com/room/crackthehash/)
+* [x] [c4ptur3-th3-fl4g](https://tryhackme.com/room/c4ptur3th3fl4g/)
+* [ ] [Bolt](https://tryhackme.com/room/bolt/)
+* [x] [Cicada-3301 Vol:1](https://tryhackme.com/room/cicada3301vol1/)
+* [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt/)
 
 ---
 

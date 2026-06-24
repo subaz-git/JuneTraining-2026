@@ -269,5 +269,237 @@ find / -iname "*ingredient*" 2>/dev/null
 * found something
 * checked the content > 2nd incredient found
 * checking the /root directory found 3rd incredient
+---
+# Wgel CTF (TryHackMe)
 
-#
+## Steps
+
+1. Use `nmap` to find open ports in target IP  
+2. Use `gobuster` to find directories in the target site  
+3. Found directory `/sitemap`  
+   - Open it and run gobuster again:
+
+```bash
+gobuster dir -u http://<ip>/sitemap/ -w <wordlist>
+````
+
+4. Find directory `/.ssh`
+
+   * Open it and find an RSA private key (`id_rsa`)
+   * Copy the key and save it in a file (e.g. `rsa_id`)
+
+5. Secure the key permissions:
+
+```bash
+chmod 600 rsa_id
+```
+
+6. SSH into the machine:
+
+```bash
+ssh -i rsa_id jessie@<ip>
+```
+
+> Username `jessie` found from a note on the website
+
+7. After login:
+
+   * Navigate to `Documents/`
+   * Find `user_flag.txt`
+
+---
+
+# DAY 8: Steganography
+
+## Tools & Websites
+
+* AperiSolve (online steganography analysis tool)
+* [https://georgeom.net/stegonline](https://georgeom.net/stegonline)
+* Sonic Visualizer
+
+---
+
+## Basic Steganography Tools
+
+```bash
+file <image>
+exiftool <image>
+xxd <image>
+strings <image>
+```
+
+---
+
+## Extraction Tools
+
+### Outguess (LSB steganography)
+
+```bash
+outguess -r filename result.txt
+```
+
+### Binwalk
+
+```bash
+binwalk filename
+binwalk -e filename
+binwalk --dd='.*' filename
+```
+
+### Steghide
+
+```bash
+steghide extract -sf filename
+```
+
+### Stegseek
+
+```bash
+stegseek filename <wordlist>
+```
+
+### Zsteg (PNG analysis)
+
+```bash
+zsteg filename.png
+```
+
+### Stegsolve (Java tool)
+
+```bash
+java -jar stegsolve.jar
+```
+
+* Open image
+* Change bit planes
+
+### Sonic Visualizer
+
+* Open audio file
+* Zoom in
+* Add spectrogram layer (`Shift + G`)
+* Check all channels for hidden data
+
+---
+
+# DAY 9
+
+## THM Rooms Explored
+
+* Bolt
+* c4ptur3 th3 fl4g
+* Crack the Hash
+
+---
+
+## Bolt
+
+1. Use `nmap` to scan ports
+2. Use `msfconsole` to exploit CMS vulnerability
+
+   * Search exploit:
+
+   ```bash
+   search bolt
+   ```
+3. Set options and run:
+
+   ```bash
+   check
+   exploit
+   ```
+4. Gain shell access
+5. Find flag in home directory
+
+---
+
+## C4ptur3 th3 fl4g
+
+### 1. Cipher cracking
+
+* Use online tools like CodeChef cipher decoders
+
+### 2. Audio steganography
+
+* Use Sonic Visualizer
+* Add spectrogram layer (`Shift + G`)
+* Find hidden flag
+
+### 3. Image steganography
+
+```bash
+steghide extract -sf image.jpg
+```
+
+### 4. Sec Through Obscurity
+
+```bash
+binwalk image.png
+exiftool image.png
+strings image.png
+```
+
+---
+
+## Crack the Hash
+
+### 1. Hash cracking
+
+* Use [https://crackstation.com](https://crackstation.com)
+* Identify hash type using GitHub/LLM or `hashid`
+
+#### Example: bcrypt (`$2y$`)
+
+Use hashcat:
+
+```bash
+hashcat -m 3200 hash.txt rockyou.txt
+```
+
+#### Optimization (4-letter passwords)
+
+```bash
+grep -E '^.{4}$' rockyou.txt > 4rockyou.txt
+```
+
+```bash
+hashcat -m 3200 hash.txt 4rockyou.txt
+```
+
+---
+
+### 2. Hashes with salt
+
+* Identify hash type first
+* Use John the Ripper:
+
+```bash
+john --wordlist=rockyou.txt hash.txt
+```
+
+* Or use:
+
+  * [https://hashes.com](https://hashes.com)
+
+---
+
+## Tools Used
+
+* nmap
+* gobuster
+* steghide
+* exiftool
+* binwalk
+* strings
+* xxd
+* zsteg
+* hashcat
+* john the ripper
+
+---
+
+## Useful Websites
+
+* [https://crackstation.com](https://crackstation.com)
+* [https://hashes.com](https://hashes.com)
+* [https://georgeom.net/stegonline](https://georgeom.net/stegonline)
